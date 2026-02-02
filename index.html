@@ -87,7 +87,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+        <!-- Hero Section -->
     <section class="pt-32 pb-12 px-4 hero-bg overflow-hidden">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="text-center md:text-left space-y-6">
@@ -102,7 +102,7 @@
                 </div>
 
                 <h1 class="text-4xl md:text-6xl font-bold leading-tight">
-                                        <span class="gradient-text">NotebookLM</span> ฉบับสมบูรณ์ 2026<br/>
+                    <span class="gradient-text">NotebookLM</span> ฉบับสมบูรณ์ 2026<br/>
                     สร้างสมองที่สอง
                 </h1>
                 
@@ -133,7 +133,7 @@
                     <div class="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg z-10">ขายดี!</div>
                     <div class="bg-white p-2 rounded-lg border border-gray-200 shadow-inner flex-shrink-0 relative">
                          <!-- QR Icon Image -->
-                        <img src="images/qrcode-256.png" alt="Scan to Order" class="w-24 h-24 object-contain">
+                        <img src="images/qrcode-256.png" onerror="this.src='https://placehold.co/256x256?text=QR'" alt="Scan to Order" class="w-24 h-24 object-contain">
                         <div class="absolute inset-0 flex items-center justify-center bg-black/5 rounded-lg">
                             <i class="fa-solid fa-expand text-gray-500 opacity-0 group-hover:opacity-100 transition scale-125"></i>
                         </div>
@@ -155,28 +155,44 @@
                 </p>
             </div>
             
-            <!-- Book Cover (Clickable Image) -->
-            <div class="relative flex justify-center group cursor-pointer" onclick="openLightbox('images/sp_1x.jpg')">
-                <div class="absolute inset-0 bg-gradient-to-tr from-blue-200 to-purple-200 rounded-full blur-3xl opacity-30 transform scale-90 group-hover:scale-100 transition duration-500"></div>
-                
-                <!-- Badge on Image -->
-                <div class="absolute -top-4 -right-4 z-20 bg-red-500 text-white font-bold w-20 h-20 rounded-full flex items-center justify-center text-center text-xs shadow-xl rotate-12 animate-bounce-slow border-4 border-white pointer-events-none">
-                    ฉบับสมบูรณ์<br>2026
+            <!-- Right Column: Book Cover + Caption -->
+            <div class="flex flex-col items-center">
+                <!-- Book Cover (Clickable Image) -->
+                <div class="relative flex justify-center group cursor-pointer mb-8" onclick="openLightbox('images/sp_1x.jpg')">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-200 to-purple-200 rounded-full blur-3xl opacity-30 transform scale-90 group-hover:scale-100 transition duration-500"></div>
+                    
+                    <!-- Badge on Image -->
+                    <div class="absolute -top-4 -right-4 z-20 bg-red-500 text-white font-bold w-20 h-20 rounded-full flex items-center justify-center text-center text-xs shadow-xl rotate-12 animate-bounce-slow border-4 border-white pointer-events-none">
+                        ฉบับสมบูรณ์<br>2026
+                    </div>
+
+                    <!-- Main Book Image Container -->
+                    <div class="relative z-10 w-72 h-[450px] transform rotate-3 group-hover:rotate-0 transition duration-500 book-shadow">
+                        <!-- แก้ไข URL รูปหน้าปกจริงตรงนี้ -->
+                        <img src="images/cover.jpg" onerror="this.src='https://placehold.co/600x900/4285F4/FFF?text=BOOK+COVER'" alt="NotebookLM Book Cover" class="w-full h-full object-cover rounded-r-2xl rounded-l-md border-l-8 border-gray-700">
+                        
+                        <!-- Overlay Icon (Shows on Hover) -->
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-r-2xl rounded-l-md">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-4xl drop-shadow-lg"></i>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Main Book Image Container -->
-                <div class="relative z-10 w-72 h-[450px] transform rotate-3 group-hover:rotate-0 transition duration-500 book-shadow">
-                    <!-- แก้ไข URL รูปหน้าปกจริงตรงนี้ -->
-                    <img src="images/cover.jpg" alt="NotebookLM Book Cover" class="w-full h-full object-cover rounded-r-2xl rounded-l-md border-l-8 border-gray-700">
-                    
-                    <!-- Overlay Icon (Shows on Hover) -->
-                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-r-2xl rounded-l-md">
-                        <i class="fa-solid fa-magnifying-glass-plus text-white text-4xl drop-shadow-lg"></i>
+                <!-- NEW: Prominent Caption under Book -->
+                <div class="bg-white/90 backdrop-blur border border-blue-100 p-5 rounded-2xl shadow-lg max-w-sm text-center transform hover:scale-105 transition duration-300 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1 shadow-sm">
+                        <i class="fa-solid fa-quote-left text-primary text-2xl"></i>
                     </div>
+                    <p class="text-gray-700 font-semibold italic mt-2 leading-relaxed">
+                        เครื่องมือ AI มีเป็นหมื่น แต่ถ้าให้แนะนำตัวที่ 'ใช้ง่ายและครบเครื่อง' สุดๆ <br>
+                        👆จิ้มไปที่ 🗺️NotebookLM  เลยครับ! <br>
+                        <span class="text-sm font-bold text-red-500 not-italic">"ครบ จบ ในตัวเดียว" ใช้ง่าย  ไม่ต้องมีพื้นฐาน <br/>ช่วยงานได้ปังมาก! 🔥 </span>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- NEW SECTION: Infographic Summary -->
     <section class="py-12 bg-white">
@@ -189,6 +205,15 @@
             <div class="relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition duration-300" onclick="openLightbox('images/nblm-summary.jpg')">
                 <!-- แก้ไข URL รูป Infographic ตรงนี้ -->
                 <img src="images/nblm-summary.jpg" alt="NotebookLM Infographic" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition duration-500">
+                
+                <!-- Click Hint Overlay -->
+                <div class="absolute bottom-4 right-4 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-semibold opacity-80 group-hover:opacity-100 transition flex items-center">
+                    <i class="fa-solid fa-expand mr-2"></i> คลิกเพื่อดูภาพขยาย
+                </div>
+            </div>
+            <div class="mt-5 relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition duration-300" onclick="openLightbox('images/notebooklmx.jpg')">
+                <!-- แก้ไข URL รูป Infographic ตรงนี้ -->
+                <img src="images/notebooklmx.jpg" alt="NotebookLM Infographic" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition duration-500">
                 
                 <!-- Click Hint Overlay -->
                 <div class="absolute bottom-4 right-4 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-semibold opacity-80 group-hover:opacity-100 transition flex items-center">
@@ -580,17 +605,35 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">ทำไมต้องมีคู่มือเล่มนี้?</h2>
-                <p class="text-gray-600 text-lg">10 ความคุ้มค่าที่จะเปลี่ยนวิธีทำงานของคุณไปตลอดกาล</p>
+                <p class="text-gray-600 text-lg">12 ความคุ้มค่าที่จะเปลี่ยนวิธีทำงานของคุณไปตลอดกาล</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 text-xl">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">1. ALL in One</h4>
+                        <p class="text-gray-600 text-sm">รวมความรู้พื้นฐาน AI และการประยุกต์ใช้งานไว้ในเล่มเดียว</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-xl">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">2. Best Tools</h4>
+                        <p class="text-gray-600 text-sm">เป็นเครื่องมือ AI ที่มีฟังก์ชันพื้นฐานครบถ้วน ใช้งานง่ายมาก</p>
+                    </div>
+                </div>
                 <!-- Point 1 -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
                     <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary text-xl">
                         <i class="fa-solid fa-clock"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">1. ย่อเวลาทำงาน 10 ชม. เหลือ 10 นาที</h4>
+                        <h4 class="font-bold text-lg mb-1">3. ย่อเวลาทำงาน 10 ชม. เหลือ 10 นาที</h4>
                         <p class="text-gray-600 text-sm">เปลี่ยนกองเอกสารมหาศาลให้เป็นสรุปที่เข้าใจง่ายในพริบตา ไม่ต้องอดหลับอดนอนอ่านเองอีกต่อไป</p>
                     </div>
                 </div>
@@ -601,7 +644,7 @@
                         <i class="fa-solid fa-headphones"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">2. เปลี่ยนไฟล์งานเป็น Podcast ส่วนตัว</h4>
+                        <h4 class="font-bold text-lg mb-1">4. เปลี่ยนไฟล์งานเป็น Podcast ส่วนตัว</h4>
                         <p class="text-gray-600 text-sm">ฟีเจอร์เด็ด! ให้ AI จัดรายการวิทยุสรุปเนื้อหาให้คุณฟังระหว่างขับรถหรือออกกำลังกาย (รองรับภาษาไทย)</p>
                     </div>
                 </div>
@@ -612,7 +655,7 @@
                         <i class="fa-solid fa-comments"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">3. คุยกับเอกสารเหมือนมีผู้เชี่ยวชาญ</h4>
+                        <h4 class="font-bold text-lg mb-1">5. คุยกับเอกสารเหมือนมีผู้เชี่ยวชาญ</h4>
                         <p class="text-gray-600 text-sm">สงสัยตรงไหนพิมพ์ถามได้เลย AI จะค้นคำตอบจากเอกสารของคุณให้อย่างแม่นยำ ไม่ต้องเปิดหาเองทีละหน้า</p>
                     </div>
                 </div>
@@ -623,7 +666,7 @@
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">4. ข้อมูลแม่นยำ อ้างอิงแหล่งที่มา 100%</h4>
+                        <h4 class="font-bold text-lg mb-1">6. ข้อมูลแม่นยำ อ้างอิงแหล่งที่มา 100%</h4>
                         <p class="text-gray-600 text-sm">หมดปัญหา AI มั่วข้อมูล NotebookLM จะตอบเฉพาะสิ่งที่มีในเอกสารของคุณ พร้อมระบุเลขหน้าให้ตรวจสอบกลับได้ทันที</p>
                     </div>
                 </div>
@@ -634,7 +677,7 @@
                         <i class="fa-solid fa-book"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">5. คู่มือภาษาไทยเจ้าแรก เข้าใจง่าย</h4>
+                        <h4 class="font-bold text-lg mb-1">7. คู่มือภาษาไทยเจ้าแรก เข้าใจง่าย</h4>
                         <p class="text-gray-600 text-sm">เรียบเรียงโดยนักพัฒนาไทย ภาษาคนอ่านง่าย ภาพประกอบสีทุกขั้นตอน มือใหม่แค่ไหนก็ทำตามได้ทันที</p>
                     </div>
                 </div>
@@ -645,7 +688,7 @@
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">6. เทคนิค Exclusive หาไม่ได้ทั่วไป</h4>
+                        <h4 class="font-bold text-lg mb-1">8. เทคนิค Exclusive หาไม่ได้ทั่วไป</h4>
                         <p class="text-gray-600 text-sm">รวม Prompt ลับและ Workflow การทำงานจริงที่ช่วยให้คุณรีดศักยภาพของ AI ออกมาได้สูงสุด</p>
                     </div>
                 </div>
@@ -656,7 +699,7 @@
                         <i class="fa-solid fa-layer-group"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">7. ประยุกต์ได้จริงทุกสายอาชีพ</h4>
+                        <h4 class="font-bold text-lg mb-1">9. ประยุกต์ได้จริงทุกสายอาชีพ</h4>
                         <p class="text-gray-600 text-sm">ไม่ว่าจะเป็นนักเรียน นักวิจัย ครู การตลาด หรือผู้บริหาร มีเคสตัวอย่างการใช้งานจริงให้ดูเป็นแนวทาง</p>
                     </div>
                 </div>
@@ -667,7 +710,7 @@
                         <i class="fa-solid fa-laptop-file"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">8. ช่วยร่างงานเขียนและสไลด์นำเสนอ</h4>
+                        <h4 class="font-bold text-lg mb-1">10. ช่วยร่างงานเขียนและสไลด์นำเสนอ</h4>
                         <p class="text-gray-600 text-sm">ให้ AI ช่วยร่างโครงร่างบทความ รายงาน หรือหัวข้อสไลด์จากข้อมูลดิบของคุณ ประหยัดเวลาคิดงานไปได้เยอะ</p>
                     </div>
                 </div>
@@ -678,7 +721,7 @@
                         <i class="fa-solid fa-gift"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">9. เล่มเดียวจบ! ตอบโจทย์ทุกสายอาชีพ</h4>
+                        <h4 class="font-bold text-lg mb-1">11. เล่มเดียวจบ! ตอบโจทย์ทุกสายอาชีพ</h4>
                         <p class="text-gray-600 text-sm">เนื้อหาคุณภาพที่กลั่นกรองมาแล้วว่า "คุ้มค่า" และ "เข้าใจ" นำไปใช้ได้ตลอดชีวิต</p>
                     </div>
                 </div>
@@ -689,7 +732,7 @@
                         <i class="fa-solid fa-user-shield"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">10. มี Support ปรึกษาได้ตลอด</h4>
+                        <h4 class="font-bold text-lg mb-1">12. มี Support ปรึกษาได้ตลอด</h4>
                         <p class="text-gray-600 text-sm">ติดขัดตรงไหนทักแชทถามได้ ไม่ทิ้งกัน มีทีมงานช่วยดูแลและตอบคำถามการใช้งาน</p>
                     </div>
                 </div>
@@ -777,7 +820,7 @@
             
             <h3 class="text-2xl font-bold mb-2">เขียนโดย: นักพัฒนาไทย TH.AI Developer</h3>
             <p class="text-gray-300 mb-10 max-w-2xl mx-auto italic">
-                "ผมใช้เวลาทดสอบ NotebookLM ตั้งแต่วันแรกที่เปิดตัว เพื่อกลั่นกรองออกมาเป็นเทคนิคที่ใช้งานได้จริงในเล่มนี้ ไม่ดีจริงไม่เอามาแนะนำครับ"
+                "เราใช้เวลาค้นคว้าและทดสอบ NotebookLM  เพื่อกลั่นกรองออกมาเป็นเทคนิคที่ใช้งานได้จริงในเล่มนี้ เครื่องมือนี้ถ้าไม่ดีจริงไม่เอามาแนะนำครับ"
             </p>
 
             <!-- Social Media Channels with QR Codes -->
