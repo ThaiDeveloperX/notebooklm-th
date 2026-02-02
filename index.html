@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotebookLM ฉบับสมบูรณ์ 2026 - เจาะลึก 17 บท 167 หน้า</title>
+    
+    <!-- ฟอนต์ภาษาไทย (Prompt) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Config สีและฟอนต์ -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4285F4', // Google Blue tone
+                        secondary: '#A142F4', // NotebookLM Purple tone
+                        dark: '#1F2937',
+                        light: '#F3F4F6',
+                        stripe: '#635BFF' // Stripe Brand Color
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #4285F4, #A142F4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background-image: radial-gradient(circle at center, rgba(66, 133, 244, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+        .book-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 40px rgba(66, 133, 244, 0.3);
+        }
+        .preview-card:hover .overlay-icon {
+            opacity: 1;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased bg-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <!-- Logo + Brand -->
+            <a href="#" class="flex items-center gap-3 group">
+                <!-- ใส่ Logo ตรงนี้ -->
+                <img src="images/logo-128-tr.png" alt="Logo" class="w-10 h-10 rounded-full border border-gray-200 shadow-sm group-hover:scale-105 transition duration-300">
+                <span class="font-bold text-xl tracking-tight text-gray-900 group-hover:text-primary transition">TH.AI Developer</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-primary transition">หน้าแรก</a>
+                <a href="#preview-gallery" class="hover:text-primary transition">ตัวอย่าง</a>
+                <a href="#reviews" class="hover:text-primary transition">รีวิว</a>
+                <a href="#pricing" class="hover:text-primary transition">ราคา</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="bg-primary hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 text-sm shadow-lg hover:shadow-blue-500/30 flex items-center gap-2">
+                <i class="fa-solid fa-cart-shopping"></i> สั่งซื้อทันที
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 px-4 hero-bg overflow-hidden">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left space-y-6">
+                <!-- Highlight Badge -->
+                <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                    <span class="inline-block bg-blue-100 text-primary px-3 py-1 rounded-full text-sm font-semibold border border-blue-200">
+                        🔥 เล่มแรกของประเทศไทย
+                    </span>
+                    <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold border border-purple-200">
+                        📚 เจาะลึก 17 บท | 167 หน้า (PDF A4)
+                    </span>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                                        <span class="gradient-text">NotebookLM</span> ฉบับสมบูรณ์ 2026<br/>
+                    สร้างสมองที่สอง
+                </h1>
+                
+                <!-- Slogan Quote -->
+                <div class="border-l-4 border-secondary pl-4 py-1 bg-gray-50 rounded-r-lg">
+                    <p class="text-lg italic text-gray-700 font-medium">
+                        "เครื่องมือเดียว ใช้ได้ทุกอาชีพ <span class="text-primary font-bold"  style="color: red">ไม่ดีจริงไม่เอามาแนะนำ</span>"<br/>
+                        เล่มแรกของไทย รวมไว้ให้ครบจบในเล่มเดียว
+                    </p>
+                </div>
+
+                <p class="text-lg text-gray-600">
+                    อ่านง่าย ทำตามได้จริง! เปลี่ยนกองเอกสารมหาศาล ให้กลายเป็นความรู้ที่สรุปได้ในวินาที คู่มือฉบับสมบูรณ์ที่จะทำให้คุณ "วิจัย เรียนรู้ และทำงาน" เร็วกว่าคนอื่น 10 เท่า
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white text-lg font-bold py-3 px-8 rounded-lg shadow-lg transform hover:-translate-y-1 transition duration-300 text-center flex flex-col items-center justify-center leading-tight min-w-[200px]">
+                        <span class="flex items-center gap-2">ช้อปเลย (299.-) <i class="fa-solid fa-cart-shopping"></i></span>
+                        <span class="text-xs font-normal text-white/90 mt-1">รองรับสแกน PromptPay</span>
+                    </a>
+                    <a href="#preview-gallery" class="border-2 border-gray-300 hover:border-primary text-gray-700 font-semibold py-4 px-8 rounded-lg transition duration-300 text-center bg-white flex items-center justify-center">
+                        ดูตัวอย่างเนื้อหา
+                    </a>
+                </div>
+
+                <!-- NEW: Prominent QR Code Scan Section (UPDATED with Click Action) -->
+                <div class="mt-8 flex flex-col md:flex-row items-center gap-4 p-4 bg-white/80 backdrop-blur rounded-xl border-2 border-blue-100 shadow-xl max-w-md mx-auto md:mx-0 relative overflow-hidden group cursor-pointer hover:border-primary transition duration-300" onclick="document.getElementById('qr-modal').classList.remove('hidden')">
+                    <div class="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg z-10">ขายดี!</div>
+                    <div class="bg-white p-2 rounded-lg border border-gray-200 shadow-inner flex-shrink-0 relative">
+                         <!-- QR Icon Image -->
+                        <img src="images/qrcode-256.png" alt="Scan to Order" class="w-24 h-24 object-contain">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/5 rounded-lg">
+                            <i class="fa-solid fa-expand text-gray-500 opacity-0 group-hover:opacity-100 transition scale-125"></i>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="font-bold text-gray-900 text-xl flex items-center justify-center md:justify-start gap-2">
+                            <i class="fa-solid fa-qrcode text-primary animate-pulse"></i> สแกนจ่ายได้เลย
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-2">รองรับ Mobile Banking</p><p> ทุกธนาคาร จ่ายผ่าน PromptPay ได้</p>
+                        <span class="inline-block bg-primary/10 hover:bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold transition">
+                            คลิกเพื่อดู QR Code <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <p class="text-sm text-gray-500 mt-4 flex items-center justify-center md:justify-start gap-3">
+                    <span class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-1"></i> รับไฟล์ PDF ทางอีเมล</span>
+                    <span class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-1"></i> อ่านได้ทุกอุปกรณ์</span>
+                </p>
+            </div>
+            
+            <!-- Book Cover (Clickable Image) -->
+            <div class="relative flex justify-center group cursor-pointer" onclick="openLightbox('images/sp_1x.jpg')">
+                <div class="absolute inset-0 bg-gradient-to-tr from-blue-200 to-purple-200 rounded-full blur-3xl opacity-30 transform scale-90 group-hover:scale-100 transition duration-500"></div>
+                
+                <!-- Badge on Image -->
+                <div class="absolute -top-4 -right-4 z-20 bg-red-500 text-white font-bold w-20 h-20 rounded-full flex items-center justify-center text-center text-xs shadow-xl rotate-12 animate-bounce-slow border-4 border-white pointer-events-none">
+                    ฉบับสมบูรณ์<br>2026
+                </div>
+
+                <!-- Main Book Image Container -->
+                <div class="relative z-10 w-72 h-[450px] transform rotate-3 group-hover:rotate-0 transition duration-500 book-shadow">
+                    <!-- แก้ไข URL รูปหน้าปกจริงตรงนี้ -->
+                    <img src="images/cover.jpg" alt="NotebookLM Book Cover" class="w-full h-full object-cover rounded-r-2xl rounded-l-md border-l-8 border-gray-700">
+                    
+                    <!-- Overlay Icon (Shows on Hover) -->
+                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-r-2xl rounded-l-md">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-4xl drop-shadow-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Infographic Summary -->
+    <section class="py-12 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-2">สรุปจบในภาพเดียว: ทำไมต้องใช้ NotebookLM?</h2>
+                <p class="text-gray-500 text-sm">ภาพรวมฟีเจอร์และประโยชน์ที่คุณจะได้รับจากหนังสือเล่มนี้</p>
+            </div>
+            
+            <div class="relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition duration-300" onclick="openLightbox('images/nblm-summary.jpg')">
+                <!-- แก้ไข URL รูป Infographic ตรงนี้ -->
+                <img src="images/nblm-summary.jpg" alt="NotebookLM Infographic" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition duration-500">
+                
+                <!-- Click Hint Overlay -->
+                <div class="absolute bottom-4 right-4 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-semibold opacity-80 group-hover:opacity-100 transition flex items-center">
+                    <i class="fa-solid fa-expand mr-2"></i> คลิกเพื่อดูภาพขยาย
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Pain Points -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">คุณกำลังเจอปัญหาเหล่านี้อยู่ใช่ไหม?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 1. อ่านไม่ทัน -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-file-pdf text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">อ่านเปเปอร์ไม่ทัน</h3>
+                    <p class="text-gray-600 text-sm">มีเอกสาร PDF, รายงานการประชุม หรือหนังสือที่ต้องอ่านกองพะเนิน แต่ไม่มีเวลาอ่านให้จบ</p>
+                </div>
+                <!-- 2. สรุปยาก -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-brain text-orange-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">สรุปจับใจความยาก</h3>
+                    <p class="text-gray-600 text-sm">อ่านจบแล้วจำไม่ได้ จับประเด็นสำคัญไม่ถูก นำไปใช้งานต่อไม่ได้จริง เสียเวลาเปล่า</p>
+                </div>
+                <!-- 3. ภาษา -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-language text-purple-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">ภาษาเป็นอุปสรรค</h3>
+                    <p class="text-gray-600 text-sm">ข้อมูลดีๆ ส่วนใหญ่เป็นภาษาอังกฤษ ต้องเสียเวลาแปลทีละบรรทัด ทำให้การเรียนรู้ช้าลง</p>
+                </div>
+                <!-- 4. ไม่มีไอเดียทำสไลด์ (New) -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-chalkboard-user text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">ไม่มีไอเดียทำสไลด์นำเสนอ</h3>
+                    <p class="text-gray-600 text-sm">ต้องเตรียมพรีเซนต์งานด่วน แต่คิดโครงเรื่องไม่ออก จัดลำดับเนื้อหาไม่ได้ ไม่รู้จะเริ่มยังไง</p>
+                </div>
+                <!-- 5. อยากฟังสรุป (New) -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-headphones text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">ข้อมูลเยอะต้องการให้คนอ่านสรุปให้ฟัง</h3>
+                    <p class="text-gray-600 text-sm">ข้อมูลเยอะจนตาล้า อยากเปลี่ยนโหมดมาฟังสรุปเนื้อหาเสียง (Audio) ระหว่างเดินทางหรือทำงานบ้าน</p>
+                </div>
+                <!-- 6. ต้องการ VDO (New) -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-video text-rose-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">ต้องการคลิป VDO สรุปเนื้อหา</h3>
+                    <p class="text-gray-600 text-sm">อยากเปลี่ยนเนื้อหาเอกสารให้น่าสนใจในรูปแบบวิดีโอ/เสียง แต่เขียนสคริปต์ไม่เก่ง เรียบเรียงไม่ถูก</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preview Gallery -->
+    <section id="preview-gallery" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">เปิดอ่านตัวอย่างภายในเล่ม</h2>
+                <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full font-bold mb-4">
+                    <i class="fa-solid fa-book mr-2"></i>อัดแน่น 17 บทเรียน | 167 หน้าเต็ม | ขนาด A4
+                </div>
+                <p class="text-gray-600">เนื้อหาคุณภาพ ภาพประกอบสีทุกหน้า อ่านเข้าใจง่าย ทำตามได้ทันที</p>
+            </div>
+
+            <!-- ส่วนที่ 1: หน้าปกและสารบัญ -->
+            <div class="mb-16">
+                <h3 class="text-xl font-bold mb-6 border-l-4 border-primary pl-4">หน้าปกและสารบัญ</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Item 1: Cover -->
+                    <div class="preview-card cursor-pointer relative group rounded-lg overflow-hidden shadow-md aspect-[3/4]" 
+                         onclick="openLightbox('images/cover.jpg')">
+                        <img src="images/cover.jpg" alt="Cover" class="w-full h-full object-cover">
+                        <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-xs">หน้าปก</div>
+                    </div>
+                    <div class="preview-card cursor-pointer relative group rounded-lg overflow-hidden shadow-md aspect-[3/4]" 
+                         onclick="openLightbox('images/info1.jpg')">
+                        <img src="images/info1.jpg" alt="Cover" class="w-full h-full object-cover">
+                        <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-xs">หน้าปก</div>
+                    </div>
+                    <!-- Items: TOC -->
+                    <div class="preview-card cursor-pointer relative group rounded-lg overflow-hidden shadow-md aspect-[3/4]" 
+                         onclick="openLightbox('images/index0.jpg')">
+                        <img src="images/index0.jpg" alt="TOC 1" class="w-full h-full object-cover">
+                        <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                        </div>
+                         <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-xs">คำนำจากผู้เขียน</div>
+                    </div>
+                    <div class="preview-card cursor-pointer relative group rounded-lg overflow-hidden shadow-md aspect-[3/4]" 
+                         onclick="openLightbox('images/index1.jpg')">
+                        <img src="images/index1.jpg" alt="TOC 1" class="w-full h-full object-cover">
+                        <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                        </div>
+                         <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-xs">สารบัญ หน้า 1</div>
+                    </div>
+                    <div class="preview-card cursor-pointer relative group rounded-lg overflow-hidden shadow-md aspect-[3/4]" 
+                         onclick="openLightbox('images/index2.jpg')">
+                        <img src="images/index2.jpg" alt="TOC 2" class="w-full h-full object-cover">
+                        <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-xs">สารบัญ หน้า 2</div>
+                    </div>
+                    <div class="preview-card cursor-pointer relative group rounded-lg overflow-hidden shadow-md aspect-[3/4]" 
+                         onclick="openLightbox('images/index3.jpg')">
+                        <img src="images/index3.jpg" alt="TOC 3" class="w-full h-full object-cover">
+                        <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-xs">สารบัญ หน้า 3</div>
+                    </div>
+                     <div class="preview-card cursor-pointer relative group rounded-lg overflow-hidden shadow-md aspect-[3/4]" 
+                         onclick="openLightbox('images/index4.jpg')">
+                        <img src="images/index4.jpg" alt="TOC 3" class="w-full h-full object-cover">
+                        <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-xs">สารบัญ หน้า 4</div>
+                    </div>
+                    <div class="preview-card cursor-pointer relative group rounded-lg overflow-hidden shadow-md aspect-[3/4]" 
+                         onclick="openLightbox('images/sp_1x.jpg')">
+                        <img src="images/sp_1x.jpg" alt="TOC 3" class="w-full h-full object-cover">
+                        <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 w-full bg-black/60 text-white text-center py-1 text-xs">สั่งซื้อ</div>
+                    </div>
+                     
+                </div>
+            </div>
+
+            <!-- ส่วนที่ 2: ตัวอย่างเนื้อหา -->
+            <div>
+                <h3 class="text-xl font-bold mb-6 border-l-4 border-secondary pl-4">ตัวอย่างเนื้อหา (Preview Content)</h3>
+                
+                <!-- Grid: 2 columns on mobile, 4 columns on desktop (Vertical Aspect Ratio 3:4) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    
+                    <!-- Loop Generates 16 Items -->
+                    <!-- Item 1 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_7.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_7.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+             
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_8.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_8.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+          
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_9.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_9.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+               
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_10.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_10.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_11.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_11.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_12.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_12.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                   
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_13.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_13.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                     
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_14.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_15.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                   
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_15.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_15.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_16.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_16.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <!-- Item 11 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_17.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_17.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Item 12 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_18.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_18.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <!-- Item 13 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_19.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_19.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Item 14 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_20.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_20.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <!-- Item 15 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_21.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_21.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-star text-yellow-400 text-3xl"></i>
+                            </div>
+                        </div>
+                 
+                    </div>
+
+                     <!-- Item 16 -->
+                     <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_23.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_23.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-star text-yellow-400 text-3xl"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                      <!-- Item 9 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_24.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_24.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_25.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_25.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <!-- Item 11 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_26.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_26.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Item 12 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_27.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_27.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+ 
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">ทำไมต้องมีคู่มือเล่มนี้?</h2>
+                <p class="text-gray-600 text-lg">10 ความคุ้มค่าที่จะเปลี่ยนวิธีทำงานของคุณไปตลอดกาล</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Point 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary text-xl">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">1. ย่อเวลาทำงาน 10 ชม. เหลือ 10 นาที</h4>
+                        <p class="text-gray-600 text-sm">เปลี่ยนกองเอกสารมหาศาลให้เป็นสรุปที่เข้าใจง่ายในพริบตา ไม่ต้องอดหลับอดนอนอ่านเองอีกต่อไป</p>
+                    </div>
+                </div>
+
+                <!-- Point 2 -->
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-secondary text-xl">
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">2. เปลี่ยนไฟล์งานเป็น Podcast ส่วนตัว</h4>
+                        <p class="text-gray-600 text-sm">ฟีเจอร์เด็ด! ให้ AI จัดรายการวิทยุสรุปเนื้อหาให้คุณฟังระหว่างขับรถหรือออกกำลังกาย (รองรับภาษาไทย)</p>
+                    </div>
+                </div>
+
+                <!-- Point 3 -->
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xl">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">3. คุยกับเอกสารเหมือนมีผู้เชี่ยวชาญ</h4>
+                        <p class="text-gray-600 text-sm">สงสัยตรงไหนพิมพ์ถามได้เลย AI จะค้นคำตอบจากเอกสารของคุณให้อย่างแม่นยำ ไม่ต้องเปิดหาเองทีละหน้า</p>
+                    </div>
+                </div>
+
+                <!-- Point 4 -->
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 text-xl">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">4. ข้อมูลแม่นยำ อ้างอิงแหล่งที่มา 100%</h4>
+                        <p class="text-gray-600 text-sm">หมดปัญหา AI มั่วข้อมูล NotebookLM จะตอบเฉพาะสิ่งที่มีในเอกสารของคุณ พร้อมระบุเลขหน้าให้ตรวจสอบกลับได้ทันที</p>
+                    </div>
+                </div>
+
+                 <!-- Point 5 -->
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-xl">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">5. คู่มือภาษาไทยเจ้าแรก เข้าใจง่าย</h4>
+                        <p class="text-gray-600 text-sm">เรียบเรียงโดยนักพัฒนาไทย ภาษาคนอ่านง่าย ภาพประกอบสีทุกขั้นตอน มือใหม่แค่ไหนก็ทำตามได้ทันที</p>
+                    </div>
+                </div>
+
+                 <!-- Point 6 -->
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 text-xl">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">6. เทคนิค Exclusive หาไม่ได้ทั่วไป</h4>
+                        <p class="text-gray-600 text-sm">รวม Prompt ลับและ Workflow การทำงานจริงที่ช่วยให้คุณรีดศักยภาพของ AI ออกมาได้สูงสุด</p>
+                    </div>
+                </div>
+
+                 <!-- Point 7 -->
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 text-xl">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">7. ประยุกต์ได้จริงทุกสายอาชีพ</h4>
+                        <p class="text-gray-600 text-sm">ไม่ว่าจะเป็นนักเรียน นักวิจัย ครู การตลาด หรือผู้บริหาร มีเคสตัวอย่างการใช้งานจริงให้ดูเป็นแนวทาง</p>
+                    </div>
+                </div>
+
+                 <!-- Point 8 -->
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 text-xl">
+                        <i class="fa-solid fa-laptop-file"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">8. ช่วยร่างงานเขียนและสไลด์นำเสนอ</h4>
+                        <p class="text-gray-600 text-sm">ให้ AI ช่วยร่างโครงร่างบทความ รายงาน หรือหัวข้อสไลด์จากข้อมูลดิบของคุณ ประหยัดเวลาคิดงานไปได้เยอะ</p>
+                    </div>
+                </div>
+
+                 <!-- Point 9 -->
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-xl">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">9. เล่มเดียวจบ! ตอบโจทย์ทุกสายอาชีพ</h4>
+                        <p class="text-gray-600 text-sm">เนื้อหาคุณภาพที่กลั่นกรองมาแล้วว่า "คุ้มค่า" และ "เข้าใจ" นำไปใช้ได้ตลอดชีวิต</p>
+                    </div>
+                </div>
+
+                 <!-- Point 10 -->
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start hover:shadow-md transition">
+                    <div class="flex-shrink-0 w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 text-xl">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">10. มี Support ปรึกษาได้ตลอด</h4>
+                        <p class="text-gray-600 text-sm">ติดขัดตรงไหนทักแชทถามได้ ไม่ทิ้งกัน มีทีมงานช่วยดูแลและตอบคำถามการใช้งาน</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA Box -->
+            <div class="mt-12 bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center shadow-xl relative overflow-hidden">
+                <div class="absolute inset-0 bg-white/10 pattern-dots"></div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold mb-4">ทั้งหมดนี้ในราคาเพียง <span class="text-yellow-300 text-4xl" >299.-</span>  (<strike>จาก 590.-</strike>)</h3>
+                    <p class="mb-6 text-blue-100">ลงทุนหลักร้อย ผลลัพธ์หลักแสน นำไปปรับใช้ได้ตลอดชีวิต คุ้มค่าที่สุดสำหรับการพัฒนาตัวเองในปีนี้</p>
+                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300">
+                        <i class="fa-solid fa-cart-shopping mr-2"></i> เป็นเจ้าของทันที
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section (NEW) -->
+    <section id="reviews" class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">เสียงตอบรับจากผู้อ่าน</h2>
+            <p class="text-center text-gray-500 mb-12">รีวิวจากผู้ใช้งานจริงบน Facebook Fanpage</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-gray-50 rounded-xl p-4 shadow-sm hover:shadow-md transition flex flex-col border border-gray-200">
+                    <!-- พื้นที่ใส่รูปแคปจาก Facebook -->
+                    <div class="mb-4 rounded-lg overflow-hidden cursor-pointer border border-gray-200 relative group" onclick="openLightbox('images/review.jpg')">
+                        <img src="images/review.jpg" alt="Review 1" class="w-full h-auto object-cover group-hover:opacity-90 transition">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition bg-black/10">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                    </div>
+                    <!-- ปุ่มลิงก์ -->
+                    <div class="mt-auto">
+                        <a href="https://www.facebook.com/share/p/1Cx33tEm7q/" target="_blank" class="block w-full bg-[#1877F2] hover:bg-[#166fe5] text-white text-sm font-bold py-3 rounded-lg text-center transition shadow-sm hover:shadow-md">
+                            <i class="fa-brands fa-facebook mr-2"></i> ดูโพสต์ต้นฉบับ
+                        </a>
+                    </div>
+                </div>
+
+                 <!-- Review 2 -->
+                 <div class="bg-gray-50 rounded-xl p-4 shadow-sm hover:shadow-md transition flex flex-col border border-gray-200">
+                    <div class="mb-4 rounded-lg overflow-hidden cursor-pointer border border-gray-200 relative group" onclick="openLightbox('images/review2.jpg')">
+                        <img src="images/review2.jpg" alt="Review 2" class="w-full h-auto object-cover group-hover:opacity-90 transition">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition bg-black/10">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto">
+                        <a href="https://www.facebook.com/share/p/1BvHzBAqoG/" target="_blank" class="block w-full bg-[#1877F2] hover:bg-[#166fe5] text-white text-sm font-bold py-3 rounded-lg text-center transition shadow-sm hover:shadow-md">
+                            <i class="fa-brands fa-facebook mr-2"></i> ดูโพสต์ต้นฉบับ
+                        </a>
+                    </div>
+                </div>
+
+                 <!-- Review 3 -->
+                 <div class="bg-gray-50 rounded-xl p-4 shadow-sm hover:shadow-md transition flex flex-col border border-gray-200">
+                    <div class="mb-4 rounded-lg overflow-hidden cursor-pointer border border-gray-200 relative group" onclick="openLightbox('images/review3.jpg')">
+                        <img src="images/review3.jpg" alt="Review 3" class="w-full h-auto object-cover group-hover:opacity-90 transition">
+                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition bg-black/10">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="https://www.facebook.com/share/p/1Aj85QvWnB/" target="_blank" class="block w-full bg-[#1877F2] hover:bg-[#166fe5] text-white text-sm font-bold py-3 rounded-lg text-center transition shadow-sm hover:shadow-md">
+                            <i class="fa-brands fa-facebook mr-2"></i> ดูโพสต์ต้นฉบับ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Author -->
+    <section class="py-16 bg-dark text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <!-- Author Logo -->
+            <div class="w-28 h-28 bg-white rounded-full mx-auto mb-6 overflow-hidden border-4 border-primary shadow-lg p-1">
+                 <img src="images/logo-128-tr.png" alt="TH.AI Developer Logo" class="w-full h-full object-cover rounded-full">
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-2">เขียนโดย: นักพัฒนาไทย TH.AI Developer</h3>
+            <p class="text-gray-300 mb-10 max-w-2xl mx-auto italic">
+                "ผมใช้เวลาทดสอบ NotebookLM ตั้งแต่วันแรกที่เปิดตัว เพื่อกลั่นกรองออกมาเป็นเทคนิคที่ใช้งานได้จริงในเล่มนี้ ไม่ดีจริงไม่เอามาแนะนำครับ"
+            </p>
+
+            <!-- Social Media Channels with QR Codes -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Facebook Card -->
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-[#1877F2] transition group flex flex-col items-center">
+                    <a href="https://www.facebook.com/thaideveloper" target="_blank" class="flex items-center gap-2 text-[#1877F2] font-bold mb-4 hover:underline text-lg">
+                        <i class="fa-brands fa-facebook text-2xl"></i> ติดตามเพจ
+                    </a>
+                    <!-- QR Space -->
+                    <div class="bg-white p-2 rounded-lg w-32 h-32 flex items-center justify-center mb-3">
+                        <img src="images/QRCODE-FB.png" alt="Facebook QR Code" class="w-full h-full object-contain">
+                    </div>
+                    <p class="text-xs text-gray-400">สแกนเพื่อติดตามข่าวสารและทริคใหม่ๆ</p>
+                </div>
+
+                <!-- LINE Card -->
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-[#06C755] transition group flex flex-col items-center">
+                    <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" class="flex items-center gap-2 text-[#06C755] font-bold mb-4 hover:underline text-lg">
+                        <i class="fa-brands fa-line text-2xl"></i> เพิ่มเพื่อน LINE
+                    </a>
+                    <!-- QR Space -->
+                    <div class="bg-white p-2 rounded-lg w-32 h-32 flex items-center justify-center mb-3">
+                        <img src="images/QRCODE-LINE.png" alt="LINE QR Code" class="w-full h-full object-contain">
+                    </div>
+                    <p class="text-xs text-gray-400">สแกนเพื่อสอบถาม หรือแจ้งปัญหาการใช้งาน</p>
+                </div>
+
+                <!-- YouTube Card -->
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-[#FF0000] transition group flex flex-col items-center">
+                    <a href="https://www.youtube.com/@ThaiDeveloper-mm3vi" target="_blank" class="flex items-center gap-2 text-[#FF0000] font-bold mb-4 hover:underline text-lg">
+                        <i class="fa-brands fa-youtube text-2xl"></i> ดูคลิปสอน
+                    </a>
+                    <!-- QR Space -->
+                    <div class="bg-white p-2 rounded-lg w-32 h-32 flex items-center justify-center mb-3">
+                        <img src="images/QRCODE-Youtube.png" alt="YouTube QR Code" class="w-full h-full object-contain">
+                    </div>
+                    <p class="text-xs text-gray-400">สแกนเพื่อดูวิดีโอเทคนิคฟรี</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 relative overflow-hidden" id="pricing">
+        <div class="absolute inset-0 bg-blue-50 transform -skew-y-3 origin-top-left z-0"></div>
+        <div class="max-w-xl mx-auto px-4 relative z-10">
+            
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 leading-snug">
+                    "ลงทุนกับความรู้หลักร้อย <br>
+                    <span class="text-primary">เพื่อประหยัดเวลาทำงานไป<span style="color: red">ตลอดชีวิต</span>"</span>
+                </h2>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 transform hover:scale-105 transition duration-300">
+                <div class="bg-primary p-6 text-center text-white">
+                    <h3 class="text-2xl font-bold">Promotion เปิดตัว!</h3>
+                    <p class="text-blue-100 text-sm">จำนวนจำกัด ราคาหลักร้อย ได้ความรู้ติดตัวตลอดชีพ</p>
+                </div>
+                <div class="p-8 text-center">
+                    <div class="flex justify-center items-center gap-3 mb-4">
+                        <span class="text-gray-400 text-xl line-through">ราคาปกติ 590.-</span>
+                    </div>
+                    <div class="text-6xl font-bold text-gray-800 mb-2 gradient-text">299.-</div>
+                    <p class="text-gray-500 mb-6 font-semibold">ของแท้ราคาพิเศษ | ชำระครั้งเดียวจบ</p>
+
+                    <ul class="text-left space-y-3 mb-8 pl-4 border-t border-b py-6 bg-gray-50 rounded-lg">
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3"></i> เจาะลึก 17 บท | 167 หน้า (PDF A4)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3"></i> อ่านง่าย ทำตามได้จริง ทุกอาชีพ</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3"></i> ฟรี! อัปเดตเนื้อหาตลอดปี 2026</li>
+                    </ul>
+
+                    <!-- CTA Button Direct Link -->
+                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="block w-full bg-gradient-to-r from-primary to-secondary text-white font-bold text-xl py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-pulse group relative overflow-hidden">
+                        <span class="relative z-10 flex flex-col items-center">
+                            <span>ช้อปเลย (คลิกที่นี่)</span>
+                            <span class="text-xs font-normal opacity-90 mt-1"><i class="fa-solid fa-qrcode mr-1"></i> รองรับสแกน PromptPay / บัตรเครดิต</span>
+                            <img src="images/stripe-logo-132.png" style="height: 30px;" >
+                        </span>
+                        <!-- Shiny effect -->
+                        <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-30 group-hover:animate-shiny"></div>
+                    </a>
+                    
+                    <!-- Trust Box: Stripe Explanation -->
+                    <div class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-100 text-sm text-left shadow-inner">
+                        <div class="flex items-center gap-2 mb-2 font-bold text-gray-700">
+                            <i class="fa-solid fa-shield-halved text-green-500"></i>
+                            ชำระเงินปลอดภัย 100% ผ่าน Stripe
+                        </div>
+                        <p class="text-gray-500 text-xs leading-relaxed">
+                            <strong>Stripe คืออะไร?</strong>: ระบบรับชำระเงินระดับโลก (Global Payment Gateway) ที่บริษัทยักษ์ใหญ่เลือกใช้ (เช่น Google, Amazon, Zoom) ข้อมูลของท่านจะถูกเข้ารหัสความปลอดภัยสูงสุด ไม่มีการเก็บข้อมูลบัตรไว้ที่ร้านค้า
+                        </p>
+                        <div class="flex gap-2 mt-3 opacity-70 flex-wrap">
+                            <span class="border px-2 py-1 rounded bg-white text-xs flex items-center gap-1"><i class="fa-solid fa-qrcode text-blue-600"></i> PromptPay</span>
+                            <span class="border px-2 py-1 rounded bg-white text-xs flex items-center gap-1"><i class="fa-brands fa-cc-visa text-blue-800"></i> Visa</span>
+                            <span class="border px-2 py-1 rounded bg-white text-xs flex items-center gap-1"><i class="fa-brands fa-cc-mastercard text-red-600"></i> Mastercard</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        
+                            รับชำระเงินผ่าน Stripe Payment ระดับโลก ปลอดภัย 100%                     
+                    </div>
+                   
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 max-w-3xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-center mb-8">คำถามที่พบบ่อย (FAQ)</h2>
+        <div class="space-y-4">
+            <details class="bg-white border rounded-lg p-4 cursor-pointer group">
+                <summary class="font-semibold flex justify-between items-center list-none">
+                    NotebookLM คืออะไร?
+                    <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <p class="text-gray-600 mt-3 text-sm">NotebookLM คือ AI Note-taking app จาก Google ที่ให้คุณอัปโหลดไฟล์ของคุณเองเข้าไป แล้วให้ AI ช่วยสรุป ตอบคำถาม หรือสร้างไอเดียจากไฟล์นั้น</p>
+            </details>
+            <!-- UPDATED FAQ ITEMS -->
+            <details class="bg-white border rounded-lg p-4 cursor-pointer group">
+                <summary class="font-semibold flex justify-between items-center list-none">
+                    จ่ายผ่าน Stripe ปลอดภัยไหม?
+                    <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <p class="text-gray-600 mt-3 text-sm">
+                    ปลอดภัยสูงสุดครับ Stripe เป็นผู้ให้บริการรับชำระเงินระดับโลก มาตรฐานเดียวกับที่บริษัทอย่าง Google และ Amazon ใช้ ข้อมูลบัตรเครดิตของท่านจะถูกเข้ารหัสและส่งตรงไปยัง Stripe โดยไม่ผ่านเซิร์ฟเวอร์ของเรา และเรายังรองรับการจ่ายแบบ <strong>สแกน QR Code (PromptPay)</strong> ผ่านแอปธนาคารไทยได้ทันที ซึ่งสะดวกและปลอดภัยมากครับ
+                </p>
+            </details>
+            
+            <details class="bg-white border rounded-lg p-4 cursor-pointer group">
+                <summary class="font-semibold flex justify-between items-center list-none">
+                    รับไฟล์ยังไง?
+                    <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <div class="mt-3 text-sm text-gray-600 space-y-3">
+                    <p>ระบบจะจัดส่งไฟล์ PDF ให้ทางอีเมลที่ท่านระบุไว้ <strong>ภายใน 24 ชั่วโมง</strong> ครับ</p>
+                    <p class="bg-blue-50 p-3 rounded-lg border border-blue-100">
+                        <i class="fa-solid fa-circle-info text-primary mr-1"></i> 
+                        หากไม่ได้รับไฟล์ภายในเวลาที่กำหนด สามารถติดต่อแอดมินได้ทันทีผ่านช่องทาง:
+                    </p>
+                    <ul class="space-y-2 pl-2">
+                        <li>
+                            <i class="fa-brands fa-facebook text-blue-600 w-6"></i> 
+                            Facebook Page: <a href="https://www.facebook.com/thaideveloper" target="_blank" class="text-primary hover:underline font-semibold">TH.AI Developer</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-line text-green-500 w-6"></i> 
+                            LINE: <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" class="text-green-600 hover:underline font-semibold">@194zbaus</a>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12 text-center text-gray-500 text-sm border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col items-center">
+            
+            <!-- Footer Logo -->
+            <div class="mb-6 flex flex-col items-center">
+                <img src="images/logo-128-tr.png" alt="Logo" class="w-16 h-16 rounded-full shadow-md mb-2 border border-gray-200">
+                <span class="font-bold text-lg text-gray-800">TH.AI Developer</span>
+            </div>
+
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.facebook.com/thaideveloper" target="_blank" class="hover:text-[#1877F2] transition transform hover:scale-110" title="Facebook">
+                    <i class="fa-brands fa-facebook text-3xl"></i>
+                </a>
+                <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" class="hover:text-[#06C755] transition transform hover:scale-110" title="LINE">
+                    <i class="fa-brands fa-line text-3xl"></i>
+                </a>
+                <a href="https://www.youtube.com/@ThaiDeveloper-mm3vi" target="_blank" class="hover:text-[#FF0000] transition transform hover:scale-110" title="YouTube">
+                    <i class="fa-brands fa-youtube text-3xl"></i>
+                </a>
+            </div>
+            <p>&copy; 2026 นักพัฒนาไทย TH.AI Developer. สงวนลิขสิทธิ์.</p>
+        </div>
+    </footer>
+
+    <!-- Payment Modal (Secondary Option) -->
+    <div id="payment-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center px-4 backdrop-blur-sm">
+        <div class="bg-white rounded-xl max-w-md w-full p-6 relative animate-fade-in-up shadow-2xl">
+            <button onclick="document.getElementById('payment-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <i class="fa-solid fa-times text-xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold mb-4 text-center">ช่องทางการชำระเงิน (โอนเงินสด)</h3>
+            <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center mb-6 bg-gray-50">
+                <p class="text-sm text-gray-500 mb-2">ธนาคารกสิกรไทย (KBank)</p>
+                <p class="text-2xl font-bold text-primary tracking-wider font-mono select-all cursor-pointer hover:text-blue-600" onclick="copyToClipboard('000-0-00000-0')">
+                    000-0-00000-0
+                </p>
+                <p class="text-sm text-gray-500 mt-2">ชื่อบัญชี: นักพัฒนาไทย TH.AI Developer</p>
+                <p class="text-lg font-bold text-red-500 mt-2">ยอดโอน: 299 บาท</p>
+            </div>
+            <div class="space-y-3">
+                <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg text-center transition">
+                    <i class="fa-brands fa-line mr-2"></i> แจ้งสลิปผ่าน LINE
+                </a>
+            </div>
+            <p class="text-xs text-center text-gray-400 mt-4">คลิกที่เลขบัญชีเพื่อคัดลอก</p>
+        </div>
+    </div>
+
+    <!-- NEW: QR Payment Instruction Modal (Special Popup) -->
+    <div id="qr-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center px-4 backdrop-blur-sm" onclick="this.classList.add('hidden')">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 relative animate-fade-in-up shadow-2xl border-t-8 border-primary text-center" onclick="event.stopPropagation()">
+            <button onclick="document.getElementById('qr-modal').classList.add('hidden')" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
+                <i class="fa-solid fa-times text-xl"></i>
+            </button>
+            
+            <div class="mb-4">
+                 <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase">แนะนำ</span>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-1 text-gray-800">สแกนเพื่อเลือกช่องทาง</h3>
+            <p class="text-xl font-bold text-[#003D99] mb-4 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-qrcode"></i> จ่ายผ่าน PromptPay ได้
+            </p>
+
+            <div class="bg-blue-50 p-4 rounded-xl border-2 border-dashed border-blue-200 mb-6 flex flex-col items-center justify-center relative group">
+                <!-- QR Image (Instructional) -->
+                <img src="images/qrcode-256.png" alt="PromptPay QR" class="w-48 h-48 object-contain rounded-lg shadow-sm mix-blend-multiply">
+                <p class="text-xs text-gray-400 mt-2">ตัวอย่าง QR Code (ของจริงจะขึ้นในหน้า Stripe)</p>
+                
+                <!-- PromptPay Logo/Badge -->
+                <div class="absolute -bottom-3 bg-white px-2 py-1 rounded shadow border border-gray-100 flex items-center gap-1">
+                    <img src="images/stripe-logo-128.png" onerror="this.src='https://placehold.co/60x25?text=PromptPay'" alt="PromptPay" class="h-5">
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                 <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="block w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
+                    ไปที่หน้าชำระเงิน <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p class="text-xs text-gray-500">
+                    ระบบจะพาไปที่หน้า Stripe Secure Payment <br>
+                    เลือกแท็บ <strong>"PromptPay"</strong> เพื่อสแกนจ่าย
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal (For Gallery) -->
+    <div id="lightbox-modal" class="hidden fixed inset-0 z-[60] bg-black/90 flex items-center justify-center p-4 backdrop-blur-md" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-gray-300 focus:outline-none" onclick="closeLightbox()">
+            &times;
+        </button>
+        <img id="lightbox-img" src="" class="max-h-[90vh] max-w-[95vw] object-contain rounded-lg shadow-2xl transform transition-transform duration-300 scale-95 opacity-0" onclick="event.stopPropagation()">
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('คัดลอกเลขบัญชีเรียบร้อยแล้ว!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        function openLightbox(imageSrc) {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            modal.classList.remove('hidden');
+            img.src = imageSrc;
+            setTimeout(() => {
+                img.classList.remove('scale-95', 'opacity-0');
+                img.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            img.classList.remove('scale-100', 'opacity-100');
+            img.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                img.src = '';
+            }, 300);
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    </script>
+
+</body>
+</html>
