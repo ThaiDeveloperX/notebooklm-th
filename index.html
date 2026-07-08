@@ -81,7 +81,7 @@
             </div>
 
             <!-- CTA Button -->
-            <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="bg-primary hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 text-sm shadow-lg hover:shadow-blue-500/30 flex items-center gap-2">
+            <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 text-sm shadow-lg hover:shadow-blue-500/30 flex items-center gap-2">
                 <i class="fa-solid fa-cart-shopping"></i> สั่งซื้อทันที
             </a>
         </div>
@@ -119,40 +119,38 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white text-lg font-bold py-2 px-4 rounded-lg shadow-lg transform hover:-translate-y-1 transition duration-300 text-center flex flex-col items-center justify-center leading-tight min-w-[200px]">
+                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white text-lg font-bold py-2 px-4 rounded-lg shadow-lg transform hover:-translate-y-1 transition duration-300 text-center flex flex-col items-center justify-center leading-tight min-w-[200px]">
                         <span class="flex items-center gap-2">ช้อปเลย (299.-) <i class="fa-solid fa-cart-shopping"></i></span>
-                        <span class="text-xs font-normal text-white/90 mt-1">รองรับสแกน PromptPay</span>
+                        <span class="text-xs font-normal text-white/90 mt-1">ชำระผ่าน Stripe / PromptPay</span>
                     </a>
-                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="border-2 border-gray-300 hover:border-primary text-gray-700 font-semibold py-2 px-4 rounded-lg transition duration-300 text-center bg-white flex items-center justify-center">
-                        <img src="images/promptpay.jpg" style="width: 50px;">
+                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" rel="noopener noreferrer" class="border-2 border-gray-300 hover:border-primary text-gray-700 font-semibold py-2 px-4 rounded-lg transition duration-300 text-center bg-white flex items-center justify-center">
+                        <img src="images/promptpay.jpg" alt="PromptPay" style="width: 50px;">
                     </a>
                     <a href="#preview-gallery" class="border-2 border-gray-300 hover:border-primary text-gray-700 font-semibold py-2 px-4 rounded-lg transition duration-300 text-center bg-white flex items-center justify-center">
                         ดูตัวอย่างเนื้อหา
                     </a>
                 </div>
 
-                <!-- NEW: Prominent QR Code Scan Section (UPDATED with Click Action) -->
-                <div class="mt-8 flex flex-col md:flex-row items-center gap-4 p-4 bg-white/80 backdrop-blur rounded-xl border-2 border-blue-100 shadow-xl max-w-md mx-auto md:mx-0 relative overflow-hidden group cursor-pointer hover:border-primary transition duration-300" onclick="document.getElementById('qr-modal').classList.remove('hidden')">
+                <!-- Prominent checkout CTA -->
+                <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" rel="noopener noreferrer" class="mt-8 flex flex-col md:flex-row items-center gap-4 p-5 bg-gradient-to-r from-white via-blue-50 to-purple-50 rounded-xl border-2 border-blue-200 shadow-xl max-w-md mx-auto md:mx-0 relative overflow-hidden group hover:border-primary hover:shadow-blue-500/20 transition duration-300">
                     <div class="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg z-10">ขายดี!</div>
-                    <div class="bg-white p-2 rounded-lg border border-gray-200 shadow-inner flex-shrink-0 relative">
-                         <!-- QR Icon Image -->
-                        <img src="images/qrcode-256.png" onerror="this.src='https://placehold.co/256x256?text=QR'" alt="Scan to Order" class="w-24 h-24 object-contain">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/5 rounded-lg">
-                            <i class="fa-solid fa-expand text-gray-500 opacity-0 group-hover:opacity-100 transition scale-125"></i>
-                        </div>
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary text-white shadow-lg flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition duration-300">
+                        <i class="fa-solid fa-cart-shopping text-2xl"></i>
                     </div>
-                    <div class="text-center md:text-left">
-                        <h3 class="font-bold text-gray-900 text-xl flex items-center justify-center md:justify-start gap-2">
-                            <i class="fa-solid fa-qrcode text-primary animate-pulse"></i> สแกนจ่ายได้เลย
+                    <div class="text-center md:text-left flex-1">
+                        <h3 class="font-bold text-gray-900 text-2xl flex items-center justify-center md:justify-start gap-2">
+                            คลิกเพื่อสั่งซื้อ
                         </h3>
-                        <p class="text-sm text-gray-600 mb-2">รองรับ Mobile Banking</p><p> ทุกธนาคาร จ่ายผ่าน PromptPay ได้</p>
-                        <span class="inline-block bg-primary/10 hover:bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold transition">
-                            คลิกเพื่อดู QR Code <i class="fa-solid fa-arrow-right ml-1"></i>
+                        <p class="text-sm text-gray-600 mt-1">
+                            ระบบจะพาไปยังหน้า Stripe Secure Payment เพื่อเลือก PromptPay หรือบัตรเครดิต
+                        </p>
+                        <span class="mt-3 inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-full text-sm font-bold shadow-md group-hover:shadow-lg transition">
+                            ไปหน้าชำระเงิน 299.- <i class="fa-solid fa-arrow-right"></i>
                         </span>
                     </div>
-                </div>
+                </a>
 
-                <p class="text-sm text-gray-500 mt-4 flex items-center justify-center md:justify-start gap-3" style="font-size: 16px;">
+                <p class="text-sm text-gray-500 mt-4 flex flex-wrap items-center justify-center md:justify-start gap-3" style="font-size: 16px;">
                     <span class="flex items-center" style="color: red"><i class="fa-solid fa-check text-green-500 mr-1"></i> หนังสือเป็น E-Book รับไฟล์ PDF ทางอีเมล</span>
                     <span class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-1"></i> อ่านได้ทุกอุปกรณ์</span>
                 </p>
@@ -308,7 +306,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">เปิดอ่านตัวอย่างภายในเล่ม</h2>
                  <h2 class="text-3xl font-bold text-center mb-4" style="color: red"> 🚀ทริกเล็กๆ จากเล่มนี้ อาจช่วยเซฟเวลาคุณได้ทั้งวัน 🚀</h2>
                 <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full font-bold mb-4">
-                    <i class="fa-solid fa-book mr-2"></i>อัดแน่น 17 บทเรียน | 171 หน้าเต็ม | ขนาด A4
+                    <i class="fa-solid fa-book mr-2"></i>อัดแน่น 17 บทเรียน | 177 หน้าเต็ม | ขนาด A4
                 </div>
                 <p class="text-gray-600">เนื้อหาคุณภาพ ภาพประกอบสีทุกหน้า อ่านเข้าใจง่าย ทำตามได้ทันที</p>
             </div>
@@ -475,7 +473,7 @@
                     <!-- Item 8 -->
                     <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_14.jpg')">
                         <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
-                            <img src="images/Screenshot_15.jpg" class="w-full h-full object-cover">
+                            <img src="images/Screenshot_14.jpg" class="w-full h-full object-cover">
                             <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
                                 <i class="fa-solid fa-book-open text-white text-3xl"></i>
                             </div>
@@ -562,6 +560,17 @@
                     </div>
 
                      <!-- Item 16 -->
+                     <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_22.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_22.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-star text-yellow-400 text-3xl"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                     <!-- Item 17 -->
                      <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_23.jpg')">
                         <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
                             <img src="images/Screenshot_23.jpg" class="w-full h-full object-cover">
@@ -572,7 +581,7 @@
                         
                     </div>
                     
-                      <!-- Item 9 -->
+                      <!-- Item 18 -->
                     <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_24.jpg')">
                         <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
                             <img src="images/Screenshot_24.jpg" class="w-full h-full object-cover">
@@ -583,7 +592,7 @@
                 
                     </div>
 
-                    <!-- Item 10 -->
+                    <!-- Item 19 -->
                     <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_25.jpg')">
                         <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
                             <img src="images/Screenshot_25.jpg" class="w-full h-full object-cover">
@@ -594,7 +603,7 @@
                     
                     </div>
 
-                    <!-- Item 11 -->
+                    <!-- Item 20 -->
                     <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_26.jpg')">
                         <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
                             <img src="images/Screenshot_26.jpg" class="w-full h-full object-cover">
@@ -605,7 +614,7 @@
                         
                     </div>
 
-                    <!-- Item 12 -->
+                    <!-- Item 21 -->
                     <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_27.jpg')">
                         <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
                             <img src="images/Screenshot_27.jpg" class="w-full h-full object-cover">
@@ -614,6 +623,17 @@
                             </div>
                         </div>
                         
+                    </div>
+
+                    <!-- Item 22 -->
+                    <div class="group cursor-pointer" onclick="openLightbox('images/Screenshot_28.jpg')">
+                        <div class="preview-card relative rounded-lg overflow-hidden shadow-sm aspect-[3/4] bg-gray-200 border hover:shadow-xl transition duration-300">
+                            <img src="images/Screenshot_28.jpg" class="w-full h-full object-cover">
+                            <div class="overlay-icon absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition duration-300">
+                                <i class="fa-solid fa-book-open text-white text-3xl"></i>
+                            </div>
+                        </div>
+
                     </div>
                     
                 </div>
@@ -787,7 +807,7 @@
                 <div class="relative z-10">
                     <h3 class="text-2xl font-bold mb-4">ทั้งหมดนี้ในราคาเพียง <span class="text-yellow-300 text-4xl" >299.-</span>  (<strike>จาก 590.-</strike>)</h3>
                     <p class="mb-6 text-blue-100">ลงทุนหลักร้อย ผลลัพธ์หลักแสน นำไปปรับใช้ได้ตลอดชีวิต คุ้มค่าที่สุดสำหรับการพัฒนาตัวเองในปีนี้</p>
-                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300">
+                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300">
                         <i class="fa-solid fa-cart-shopping mr-2"></i> เป็นเจ้าของทันที
                     </a>
                 </div>
@@ -813,7 +833,7 @@
                     </div>
                     <!-- ปุ่มลิงก์ -->
                     <div class="mt-auto">
-                        <a href="https://www.facebook.com/share/p/1Cx33tEm7q/" target="_blank" class="block w-full bg-[#1877F2] hover:bg-[#166fe5] text-white text-sm font-bold py-3 rounded-lg text-center transition shadow-sm hover:shadow-md">
+                        <a href="https://www.facebook.com/share/p/1Cx33tEm7q/" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#1877F2] hover:bg-[#166fe5] text-white text-sm font-bold py-3 rounded-lg text-center transition shadow-sm hover:shadow-md">
                             <i class="fa-brands fa-facebook mr-2"></i> ดูโพสต์ต้นฉบับ
                         </a>
                     </div>
@@ -829,7 +849,7 @@
                     </div>
 
                     <div class="mt-auto">
-                        <a href="https://www.facebook.com/share/p/1BvHzBAqoG/" target="_blank" class="block w-full bg-[#1877F2] hover:bg-[#166fe5] text-white text-sm font-bold py-3 rounded-lg text-center transition shadow-sm hover:shadow-md">
+                        <a href="https://www.facebook.com/share/p/1BvHzBAqoG/" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#1877F2] hover:bg-[#166fe5] text-white text-sm font-bold py-3 rounded-lg text-center transition shadow-sm hover:shadow-md">
                             <i class="fa-brands fa-facebook mr-2"></i> ดูโพสต์ต้นฉบับ
                         </a>
                     </div>
@@ -844,7 +864,7 @@
                         </div>
                     </div>
                     <div class="mt-auto">
-                        <a href="https://www.facebook.com/share/p/1Aj85QvWnB/" target="_blank" class="block w-full bg-[#1877F2] hover:bg-[#166fe5] text-white text-sm font-bold py-3 rounded-lg text-center transition shadow-sm hover:shadow-md">
+                        <a href="https://www.facebook.com/share/p/1Aj85QvWnB/" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#1877F2] hover:bg-[#166fe5] text-white text-sm font-bold py-3 rounded-lg text-center transition shadow-sm hover:shadow-md">
                             <i class="fa-brands fa-facebook mr-2"></i> ดูโพสต์ต้นฉบับ
                         </a>
                     </div>
@@ -870,7 +890,7 @@
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Facebook Card -->
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-[#1877F2] transition group flex flex-col items-center">
-                    <a href="https://www.facebook.com/thaideveloper" target="_blank" class="flex items-center gap-2 text-[#1877F2] font-bold mb-4 hover:underline text-lg">
+                    <a href="https://www.facebook.com/thaideveloper" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-[#1877F2] font-bold mb-4 hover:underline text-lg">
                         <i class="fa-brands fa-facebook text-2xl"></i> ติดตามเพจ
                     </a>
                     <!-- QR Space -->
@@ -882,7 +902,7 @@
 
                 <!-- LINE Card -->
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-[#06C755] transition group flex flex-col items-center">
-                    <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" class="flex items-center gap-2 text-[#06C755] font-bold mb-4 hover:underline text-lg">
+                    <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-[#06C755] font-bold mb-4 hover:underline text-lg">
                         <i class="fa-brands fa-line text-2xl"></i> เพิ่มเพื่อน LINE
                     </a>
                     <!-- QR Space -->
@@ -894,7 +914,7 @@
 
                 <!-- YouTube Card -->
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-[#FF0000] transition group flex flex-col items-center">
-                    <a href="https://www.youtube.com/@ThaiDeveloper-mm3vi" target="_blank" class="flex items-center gap-2 text-[#FF0000] font-bold mb-4 hover:underline text-lg">
+                    <a href="https://www.youtube.com/@ThaiDeveloper-mm3vi" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-[#FF0000] font-bold mb-4 hover:underline text-lg">
                         <i class="fa-brands fa-youtube text-2xl"></i> ดูคลิปสอน
                     </a>
                     <!-- QR Space -->
@@ -932,17 +952,17 @@
                     <p class="text-gray-500 mb-6 font-semibold">ของแท้ราคาพิเศษ | ชำระครั้งเดียวจบ</p>
 
                     <ul class="text-left space-y-3 mb-8 pl-4 border-t border-b py-6 bg-gray-50 rounded-lg">
-                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3"></i> เจาะลึก 17 บท | 171 หน้า (PDF A4)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3"></i> เจาะลึก 17 บท | 177 หน้า (PDF A4)</li>
                         <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3"></i> อ่านง่าย ทำตามได้จริง ทุกอาชีพ</li>
                         <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3"></i> ทักษะ AI นำไปปรับใช้ได้ตลอดชีวิต </li>
                         <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3"></i> การลงทุนในความรู้คือการลงทุนที่ให้ผลตอบแทนตลอดชีวิต </li>
                     </ul>
 
                     <!-- CTA Button Direct Link -->
-                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="block w-full bg-gradient-to-r from-primary to-secondary text-white font-bold text-xl py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-pulse group relative overflow-hidden">
+                    <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-primary to-secondary text-white font-bold text-xl py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-pulse group relative overflow-hidden">
                         <span class="relative z-10 flex flex-col items-center">
                             <span>ช้อปเลย (คลิกที่นี่)</span>
-                            <span class="text-xs font-normal opacity-90 mt-1"><i class="fa-solid fa-qrcode mr-1"></i> รองรับสแกน PromptPay / บัตรเครดิต</span>
+                            <span class="text-xs font-normal opacity-90 mt-1"><i class="fa-solid fa-shield-halved mr-1"></i> เลือก PromptPay / บัตรเครดิตในหน้า Stripe</span>
                             <img src="images/stripe-logo-132.png" style="height: 30px;" >
                         </span>
                         <!-- Shiny effect -->
@@ -959,7 +979,7 @@
                             <strong>Stripe คืออะไร?</strong>: ระบบรับชำระเงินระดับโลก (Global Payment Gateway) ที่บริษัทยักษ์ใหญ่เลือกใช้ (เช่น Google, Amazon, Zoom) ข้อมูลของท่านจะถูกเข้ารหัสความปลอดภัยสูงสุด ไม่มีการเก็บข้อมูลบัตรไว้ที่ร้านค้า
                         </p>
                         <div class="flex gap-2 mt-3 opacity-70 flex-wrap">
-                            <span class="border px-2 py-1 rounded bg-white text-xs flex items-center gap-1"><i class="fa-solid fa-qrcode text-blue-600"></i> PromptPay</span>
+                            <span class="border px-2 py-1 rounded bg-white text-xs flex items-center gap-1"><i class="fa-solid fa-money-bill-transfer text-blue-600"></i> PromptPay</span>
                             <span class="border px-2 py-1 rounded bg-white text-xs flex items-center gap-1"><i class="fa-brands fa-cc-visa text-blue-800"></i> Visa</span>
                             <span class="border px-2 py-1 rounded bg-white text-xs flex items-center gap-1"><i class="fa-brands fa-cc-mastercard text-red-600"></i> Mastercard</span>
                         </div>
@@ -994,7 +1014,7 @@
                     <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
                 </summary>
                 <p class="text-gray-600 mt-3 text-sm">
-                    ปลอดภัยสูงสุดครับ Stripe เป็นผู้ให้บริการรับชำระเงินระดับโลก มาตรฐานเดียวกับที่บริษัทอย่าง Google และ Amazon ใช้ ข้อมูลบัตรเครดิตของท่านจะถูกเข้ารหัสและส่งตรงไปยัง Stripe โดยไม่ผ่านเซิร์ฟเวอร์ของเรา และเรายังรองรับการจ่ายแบบ <strong>สแกน QR Code (PromptPay)</strong> ผ่านแอปธนาคารไทยได้ทันที ซึ่งสะดวกและปลอดภัยมากครับ
+                    ปลอดภัยสูงสุดครับ Stripe เป็นผู้ให้บริการรับชำระเงินระดับโลก มาตรฐานเดียวกับที่บริษัทอย่าง Google และ Amazon ใช้ ข้อมูลบัตรเครดิตของท่านจะถูกเข้ารหัสและส่งตรงไปยัง Stripe โดยไม่ผ่านเซิร์ฟเวอร์ของเรา หากต้องการจ่ายผ่าน PromptPay ให้กดปุ่มสั่งซื้อแล้วเลือก PromptPay ในหน้า Stripe เท่านั้น ระบบจะแสดง QR สำหรับชำระเงินจริงในขั้นตอนนั้นครับ
                 </p>
             </details>
             
@@ -1012,11 +1032,11 @@
                     <ul class="space-y-2 pl-2">
                         <li>
                             <i class="fa-brands fa-facebook text-blue-600 w-6"></i> 
-                            Facebook Page: <a href="https://www.facebook.com/thaideveloper" target="_blank" class="text-primary hover:underline font-semibold">TH.AI Developer</a>
+                            Facebook Page: <a href="https://www.facebook.com/thaideveloper" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold">TH.AI Developer</a>
                         </li>
                         <li>
                             <i class="fa-brands fa-line text-green-500 w-6"></i> 
-                            LINE: <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" class="text-green-600 hover:underline font-semibold">@194zbaus</a>
+                            LINE: <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline font-semibold">@194zbaus</a>
                         </li>
                     </ul>
                 </div>
@@ -1035,13 +1055,13 @@
             </div>
 
             <div class="flex justify-center space-x-6 mb-6">
-                <a href="https://www.facebook.com/thaideveloper" target="_blank" class="hover:text-[#1877F2] transition transform hover:scale-110" title="Facebook">
+                <a href="https://www.facebook.com/thaideveloper" target="_blank" rel="noopener noreferrer" class="hover:text-[#1877F2] transition transform hover:scale-110" title="Facebook">
                     <i class="fa-brands fa-facebook text-3xl"></i>
                 </a>
-                <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" class="hover:text-[#06C755] transition transform hover:scale-110" title="LINE">
+                <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" rel="noopener noreferrer" class="hover:text-[#06C755] transition transform hover:scale-110" title="LINE">
                     <i class="fa-brands fa-line text-3xl"></i>
                 </a>
-                <a href="https://www.youtube.com/@ThaiDeveloper-mm3vi" target="_blank" class="hover:text-[#FF0000] transition transform hover:scale-110" title="YouTube">
+                <a href="https://www.youtube.com/@ThaiDeveloper-mm3vi" target="_blank" rel="noopener noreferrer" class="hover:text-[#FF0000] transition transform hover:scale-110" title="YouTube">
                     <i class="fa-brands fa-youtube text-3xl"></i>
                 </a>
             </div>
@@ -1065,50 +1085,11 @@
                 <p class="text-lg font-bold text-red-500 mt-2">ยอดโอน: 299 บาท</p>
             </div>
             <div class="space-y-3">
-                <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg text-center transition">
+                <a href="https://line.me/R/ti/p/%40194zbaus" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg text-center transition">
                     <i class="fa-brands fa-line mr-2"></i> แจ้งสลิปผ่าน LINE
                 </a>
             </div>
             <p class="text-xs text-center text-gray-400 mt-4">คลิกที่เลขบัญชีเพื่อคัดลอก</p>
-        </div>
-    </div>
-
-    <!-- NEW: QR Payment Instruction Modal (Special Popup) -->
-    <div id="qr-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center px-4 backdrop-blur-sm" onclick="this.classList.add('hidden')">
-        <div class="bg-white rounded-2xl max-w-sm w-full p-6 relative animate-fade-in-up shadow-2xl border-t-8 border-primary text-center" onclick="event.stopPropagation()">
-            <button onclick="document.getElementById('qr-modal').classList.add('hidden')" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
-                <i class="fa-solid fa-times text-xl"></i>
-            </button>
-            
-            <div class="mb-4">
-                 <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase">แนะนำ</span>
-            </div>
-
-            <h3 class="text-2xl font-bold mb-1 text-gray-800">สแกนเพื่อเลือกช่องทาง</h3>
-            <p class="text-xl font-bold text-[#003D99] mb-4 flex items-center justify-center gap-2">
-                <i class="fa-solid fa-qrcode"></i> จ่ายผ่าน PromptPay ได้
-            </p>
-
-            <div class="bg-blue-50 p-4 rounded-xl border-2 border-dashed border-blue-200 mb-6 flex flex-col items-center justify-center relative group">
-                <!-- QR Image (Instructional) -->
-                <img src="images/qrcode-256.png" alt="PromptPay QR" class="w-48 h-48 object-contain rounded-lg shadow-sm mix-blend-multiply">
-                <p class="text-xs text-gray-400 mt-2">ตัวอย่าง QR Code (ของจริงจะขึ้นในหน้า Stripe)</p>
-                
-                <!-- PromptPay Logo/Badge -->
-                <div class="absolute -bottom-3 bg-white px-2 py-1 rounded shadow border border-gray-100 flex items-center gap-1">
-                    <img src="images/stripe-logo-128.png" onerror="this.src='https://placehold.co/60x25?text=PromptPay'" alt="PromptPay" class="h-5">
-                </div>
-            </div>
-
-            <div class="space-y-3">
-                 <a href="https://buy.stripe.com/28E9AT1dbaZN55j1kt5wI02" target="_blank" class="block w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
-                    ไปที่หน้าชำระเงิน <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <p class="text-xs text-gray-500">
-                    ระบบจะพาไปที่หน้า Stripe Secure Payment <br>
-                    เลือกแท็บ <strong>"PromptPay"</strong> เพื่อสแกนจ่าย
-                </p>
-            </div>
         </div>
     </div>
 
